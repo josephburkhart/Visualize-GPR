@@ -24,4 +24,4 @@ These scripts are only compatible with 3D GPR data stored in [Hierarchical Data 
     - set `dname`, `xname`, `yname`, and `zname` as above
 5. Move your data file into the repository
 
-The script files are now ready to use.
+The script files are now ready to use. Follow the prompts in the console.
