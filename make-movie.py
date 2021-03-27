@@ -21,18 +21,23 @@ import h5py
 import math as m
 import pyvista as pv
 
-# Filenames
-data_name = 'BLDG_16_3D.h5'
+# Names
+datafile_name = 'BLDG_16_3D.h5'
 movie_name = 'KAD_GPR_BLDG16_500to6000per50.mp4'
 
+dname = 'BLDG_16_3D'
+xname = 'DimX'
+yname = 'DimY'
+zname = 'DimZ'
+
 # Import data
-f = h5py.File(data_name, 'r')
+f = h5py.File(datafile_name, 'r')
 
-data = np.array(f['BLDG_16_3D'], dtype=np.float64) #when batch processing, keys will need to be defined implicitly
+data = np.array(f[dname], dtype=np.float64) #when batch processing, keys will need to be defined implicitly
 
-xdim = np.array(f['DimY'], dtype=np.float64)       #why does it need to be DimY to work, instead of DimX?
-ydim = np.array(f['DimX'], dtype=np.float64)       #why does it need to be DimX to work, instead of DimY?
-zdim = np.array(f['DimZ'], dtype=np.float64)
+xdim = np.array(f[yname], dtype=np.float64)       #not a typo - yname is assigned to xdim because the data was improperly rotated
+ydim = np.array(f[xname], dtype=np.float64)       #not a typo - xname is assigned to ydim because the data was improperly rotated
+zdim = np.array(f[zname], dtype=np.float64)
 
 
 # Wrap data in pyvista rectilinear grid object
