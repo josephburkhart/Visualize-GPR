@@ -73,6 +73,8 @@ p.add_mesh(contours, opacity=1.0, color='white', name='contours')
 p.add_text(text=f'gpr threshold: 6000', name='threshold_label', font_size=14)
 p.show(auto_close=False)
 
+print("Rotate and pan to the desired view, then hit q to continue")
+
 # Write initial frame
 #p.write_frame()
 
