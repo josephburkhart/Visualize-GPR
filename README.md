@@ -1,5 +1,5 @@
 # Visualize GPR
-These are some scripts for working with 3D GPR data using vtk isosurfaces in Python. The user can interactively visualize the data, save 3D models of the surfaces in OBJ format, and save animations of the surfaces as MP4 videos.
+These are some scripts for working with 4D GPR data using vtk isosurfaces in Python. The user can interactively visualize the data, save 3D models of the surfaces in OBJ format, and save animations of the surfaces as MP4 videos.
  
 These scripts are only compatible with 3D GPR data stored in [Hierarchical Data Format 5](https://support.hdfgroup.org/HDF5/) (HDF5, .h5). More data formats may be added in the future. If your data is not in HDF5, see some helpful conversion tools can be found [here](https://support.hdfgroup.org/products/hdf5_tools/toolsbycat.html). If your data is in an older HDF format (.hdf), tools for converting it to HDF5 can be found [here](https://support.hdfgroup.org/products/hdf5_tools/h4toh5/).
 
